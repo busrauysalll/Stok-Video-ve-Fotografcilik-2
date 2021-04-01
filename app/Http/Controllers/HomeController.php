@@ -1,0 +1,30 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class HomeController extends Controller
+{
+    //
+    public function index()
+    {
+        return view("home.index");
+    }
+
+    public function aboutus()
+    {
+        return view("home.about");
+    }
+
+    public function test($id,$name)
+    {
+        return view('home.test',['id'=>$id,'name'=>$name]);
+        /*echo "Id number:",$id;
+        echo "<br>ID name:",$name;
+        for($i=1;$i<10;$i++)
+        {
+            echo "<br>$i= $name";
+        }*/
+    }
+}

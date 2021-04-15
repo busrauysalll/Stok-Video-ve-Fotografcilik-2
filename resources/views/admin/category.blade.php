@@ -31,12 +31,9 @@
             <!-- Default box -->
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Category List</h3>
+                    <a href="{{route('admin_category_add')}}">Category Add</a>
                 </div>
                 <div class="card">
-                    <div class="card-header">
-                        <h3 class="card-title">DataTable with default features</h3>
-                    </div>
                     <!-- /.card-header -->
                     <div class="card-body">
                         <table id="example1" class="table table-bordered table-striped">
@@ -59,7 +56,7 @@
                                 <td>{{ $rs->title }}</td>
                                 <td>{{ $rs->status }}</td>
                                 <td>Edit</td>
-                                <td>Delete</td>
+                              <td><a href="{{route('admin_category_delete',['id'=>$rs->id])}}" onclick="return confirm('Delete! Are you sure!')">Delete</a></td>
                             </tr>
                             @endforeach
 
